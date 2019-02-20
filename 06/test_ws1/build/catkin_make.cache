@@ -1,0 +1,2 @@
+hello:parameter
+-DCATKIN_DEVEL_PREFIX=/home/luca/test_ws1/devel -DCMAKE_INSTALL_PREFIX=/home/luca/test_ws1/install -G Unix Makefiles

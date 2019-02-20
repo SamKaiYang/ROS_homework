@@ -1,0 +1,13 @@
+<launch>
+    <rosparam command="load" file="$(find parameter)/config/data.yaml"/>
+    
+    <node pkg = "parameter" type = "set_global_color" name = "set_global_color_node" output="screen">
+    </node>
+    <node pkg = "parameter" type = "set_local_freq" name = "set_local_freq_node" output="screen">
+	    <rosparam command="load" file="$(find parameter)/config/data2.yaml"/>
+    </node>
+    
+    <node pkg = "turtlesim" type = "turtlesim_node" name = "turtlesim">
+    </node>
+
+</launch>

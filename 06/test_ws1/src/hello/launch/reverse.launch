@@ -1,0 +1,32 @@
+<launch>
+    <node 
+    pkg = "hello"
+    type = "rev_turtle" 
+    name = "rev_turtle"
+    respawn = "true"
+    />
+<!-- reverse cpp node -->
+
+    <node  
+    pkg = "turtlesim"
+    type = "turtlesim_node" 
+    name="normal_turtle"
+    required = "true"   
+    output="screen"
+    />
+<!-- normal node -->
+
+    <node 
+    pkg = "turtlesim"
+    type = "turtle_teleop_key" 
+    name = "teleop_key"
+    respawn = "true"
+    />
+<!-- control node key -->
+
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "reverse_new_turtle"  required = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/turtle1/rev_cmd"	/>
+    </node>
+<!-- reverse to new node -->
+
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+    <node pkg = "turtlesim" type = "turtlesim_node" name = "turtlesim">
+    </node>
+
+    <node pkg = "parameter" type = "param" name = "rw_param1" output="screen">
+        <param name="background_r" type="int" value="50"/>
+        <param name="background_g" type="int" value="150"/>
+        <param name="background_b" type="int" value="120"/>
+    </node>
+
+</launch>
+
+

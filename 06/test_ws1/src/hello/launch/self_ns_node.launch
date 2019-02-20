@@ -1,0 +1,31 @@
+<launch>
+    <node 
+    pkg = "hello"
+    type = "rand_run" 
+    name = "random_run_node"
+    respawn = "true"
+    ns = "ns1"
+    />
+
+    <node 
+    pkg = "hello"
+    type = "get_turtle_fb" 
+    name = "get_turtle_fb"
+    respawn = "true"
+    ns = "ns1"
+    />
+
+    <node  
+    pkg = "turtlesim"
+    type = "turtlesim_node" 
+    name="$(anon base_name)"
+    required = "true"   
+    ns = "ns1"
+    output="screen"
+    />
+</launch>
+
+<!--    if required node died, all process died            -->
+<!--    respawn and required cannot both be set to true.   -->
+<!--    name = "turtlesim"                                 -->
+<!--    output="screen" => ouput info to tetminal          -->
