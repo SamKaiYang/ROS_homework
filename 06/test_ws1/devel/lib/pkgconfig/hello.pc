@@ -1,8 +1,0 @@
-prefix=/home/luca/test_ws1/devel
-
-Name: hello
-Description: Description of hello
-Version: 0.0.0
-Cflags: -I/home/luca/test_ws1/devel/include -I/home/luca/test_ws1/src/hello/include
-Libs: -L/home/luca/test_ws1/devel/lib -lhello
-Requires: roscpp rospy std_msgs message_runtime

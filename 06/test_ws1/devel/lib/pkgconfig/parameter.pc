@@ -1,8 +1,0 @@
-prefix=/home/luca/test_ws1/devel
-
-Name: parameter
-Description: Description of parameter
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/luca/test_ws1/devel/lib 
-Requires: 
